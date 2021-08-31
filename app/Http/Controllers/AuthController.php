@@ -37,6 +37,8 @@ class AuthController extends Controller
                 return response($response, 422);
             }
         }
+
+        return response(["message" => "Invalid login!"], 401);
     }
 
     public function check(Request $request){
