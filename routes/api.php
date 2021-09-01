@@ -21,6 +21,6 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::post('login', [AuthController::class, 'login']);
 
-Route::middleware('auth:api')->group(function(){
+Route::middleware('auth:sanctum')->group(function(){
     Route::get('users',[AuthController::class, 'check']);
 });
