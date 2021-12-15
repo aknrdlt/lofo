@@ -19,11 +19,18 @@ class RecordController extends Controller
 
         return response(["message" => "Successfully created record!"], 200);
     }
-     public function show(){
+     public function myRecords(){
         $records = DB::table('records')
             ->select('*')
             ->where('user_id', '=', Auth::user()->id)
             ->get()->toArray();
         return response(["message" => $records], 200); 
     }
+    public function allRecords(){
+        $records = DB::table('records')
+            ->select('*')
+            ->get()->toArray();
+        return response(["message" => $records], 200); 
+    }
+
 }

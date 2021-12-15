@@ -26,5 +26,8 @@ Route::middleware('auth:sanctum')->group(function(){
 
     Route::post('create', [RecordController::class, 'create']);
 
-    Route::get('records',[RecordController::class, 'show']);
+    Route::get('my-records',[RecordController::class, 'myRecords']);
+
+    Route::get('all-records',[RecordController::class, 'allRecords']);
+
 });
