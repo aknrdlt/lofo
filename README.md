@@ -5,7 +5,7 @@ This api provides data about records and their users.
 1. Clone repository
 ```bash
 $ git clone https://github.com/aknrdlt/lofo
-$ cd zan-talaby
+$ cd lofo
 ```
 2. Install dependencies
 ```bash
