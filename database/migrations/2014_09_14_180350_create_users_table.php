@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('instagram')->nullable();
             $table->foreignId('current_team_id')->nullable();
             $table->integer('active')->default(1);
+            $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
         });
     }
