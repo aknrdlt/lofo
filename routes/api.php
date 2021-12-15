@@ -24,5 +24,7 @@ Route::post('login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->group(function(){
     Route::get('users', [AuthController::class, 'check']);
 
+    Route::post('create', [RecordController::class, 'create']);
+
     Route::get('records',[RecordController::class, 'show']);
 });

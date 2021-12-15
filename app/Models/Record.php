@@ -14,8 +14,10 @@ class Record extends Model
     ];
 
     protected $fillable = [
+        'user_id',
         'title',
         'category',
+        'status',
         'palace',
     ];
 }

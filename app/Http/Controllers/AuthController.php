@@ -44,15 +44,15 @@ class AuthController extends Controller
         return response(["message" => "Invalid login!"], 401);
     }
 
-    public function check(Request $request){
+    public function check(){
         $men = User::all();
         return response(["message" => $men], 200);
     }
-    public function show(Request $request){
+    public function show(){
         $records = DB::table('records')
             ->select('*')
             ->get()->toArray();
-                        
+
         return response(["message" => $records], 200); 
     }
 }

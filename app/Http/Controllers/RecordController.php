@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Record;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class RecordController extends Controller
@@ -17,10 +19,11 @@ class RecordController extends Controller
 
         return response(["message" => "Successfully created record!"], 200);
     }
-    public function show(){
+     public function show(){
         $records = DB::table('records')
             ->select('*')
-            ->getArray();
+            ->where('user_id', '=', Auth::user()->id)
+            ->get()->toArray();
         return response(["message" => $records], 200); 
     }
 }
