@@ -25,6 +25,12 @@ Route::middleware('auth:sanctum')->group(function(){
 
     Route::post('create', [RecordController::class, 'create']);
 
+    Route::get('record/{id}', [RecordController::class, 'show']);
+
+    Route::post('record/edit/{id}', [RecordController::class, 'edit']);
+
+    Route::post('record/delete/{id}', [RecordController::class, 'delete']);
+
     Route::get('my-records',[RecordController::class, 'myRecords']);
 
     Route::get('all-records',[RecordController::class, 'allRecords']);
