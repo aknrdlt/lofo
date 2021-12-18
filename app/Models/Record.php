@@ -9,9 +9,7 @@ class Record extends Model
 {
     use HasFactory;
 
-    protected $table = [
-        'records'
-    ];
+    protected $table = 'records';
 
     protected $fillable = [
         'user_id',

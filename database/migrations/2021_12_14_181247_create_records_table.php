@@ -21,7 +21,7 @@ class CreateRecordsTable extends Migration
             $table->string('category')->nullable(false);
             $table->string('status');
             $table->string('image')->nullable();
-            $table->string('palace')->nullable(false);
+            $table->string('place')->nullable(false);
             $table->string('description')->nullable();           
             $table->timestamps();
         });
